@@ -7,6 +7,7 @@ class CreateHouses < ActiveRecord::Migration[7.0]
       t.decimal :price
       t.text :description
       t.string :location
+      t.string :image_url
 
       t.timestamps
     end
