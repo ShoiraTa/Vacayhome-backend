@@ -22,3 +22,6 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+[Live Houses](https://vacayhome-api.herokuapp.com/api/v1/houses)
+[Live Booking](https://vacayhome-api.herokuapp.com/api/v1/bookings)
