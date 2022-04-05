@@ -6,7 +6,10 @@ class CreateHouses < ActiveRecord::Migration[7.0]
       t.string :name
       t.decimal :price
       t.text :description
-      t.string :location
+      t.string :country
+      t.string :city
+      t.text :address
+      t.string :property_type
       t.string :image_url
 
       t.timestamps
