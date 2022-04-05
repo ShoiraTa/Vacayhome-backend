@@ -16,7 +16,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_31_091932) do
 
   create_table "bookings", force: :cascade do |t|
     t.date "date"
-    t.string "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id", null: false

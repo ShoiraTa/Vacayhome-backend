@@ -9,3 +9,6 @@
 
 
 house1 = House.create(name:'house1', price: 100, description: 'This is house 1', location: 'earth', image_url:'https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500')
+
+user1 = User.create(name: 'user1', email:'user1@mail.com')
+booking1 = Booking.create(user_id: 1, house_id:1, date:'2020-01-01')
