@@ -1,4 +1,4 @@
-class Api::Vi::HousesController < ApplicationController
+class Api::V1::BookingsController < ApplicationController
   def show; end
 
   def new; end
