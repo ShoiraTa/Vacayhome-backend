@@ -8,7 +8,7 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def show
-    @bookings = Booking.find_by(user_id: params[:id])
+    @bookings = Booking.where(user_id: params[:id])
 
     render json: @bookings
   end
