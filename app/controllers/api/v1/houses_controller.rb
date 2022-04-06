@@ -28,7 +28,7 @@ class Api::V1::HousesController < ApplicationController
   end
 
   def destroy
-    @house.destroy
+    @house&.destroy
   end
 
   private
