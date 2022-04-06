@@ -33,16 +33,6 @@ RSpec.describe 'api/v1/bookings', type: :request do
           }
         }
       }
-      response(201, 'successful') do
-        after do |example|
-          example.metadata[:response][:content] = {
-            'application/json' => {
-              example: JSON.parse(response.body, symbolize_names: true)
-            }
-          }
-        end
-        run_test!
-      end
     end
   end
 
@@ -84,17 +74,6 @@ RSpec.describe 'api/v1/bookings', type: :request do
           }
         }
       }
-      response(201, 'successful') do
-        let!(:user) { User.create(name: 'testuser', email: 'test@mail.com') }
-        let!(:house) do
-          House.create(name: 'test-house', price: 20, description: 'this is test-house', country: 'canada',
-                       city: 'toronto', address: 'street 1', property_type: 'apartment', image_url: 'http://image.com')
-        end
-
-        let!(:id) { Booking.create(user:, house:).id }
-
-        run_test!
-      end
     end
   end
 end

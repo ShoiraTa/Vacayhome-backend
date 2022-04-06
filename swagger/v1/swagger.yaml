@@ -66,6 +66,35 @@ paths:
       responses:
         '204':
           description: Booking deleted
+    put:
+      summary: update a booking
+      tags:
+      - Bookings
+      consumes:
+      - application/json
+      parameters:
+      - name: booking
+        in: body
+        schema:
+          type: object
+          properties:
+            booking:
+              type: object
+              properties:
+                user_id:
+                  type: integer
+                house_id:
+                  type: integer
+                date:
+                  type: string
+                  format: datetime
+              required:
+              - user_id
+              - house_id
+              - date
+      responses:
+        '201':
+          description: successful
   "/api/v1/houses":
     get:
       summary: list houses
