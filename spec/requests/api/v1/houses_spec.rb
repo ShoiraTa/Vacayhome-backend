@@ -108,32 +108,5 @@ RSpec.describe 'api/v1/houses', type: :request do
         run_test!
       end
     end
-
-    # patch 'Update a house' do
-    #   tags 'Houses'
-    #   consumes 'application/json', 'application/xml'
-    #   produces 'application/json', 'application/xml'
-    #   parameter name: :house, in: :body, required: true, schema: {
-    #     type: :object,
-    #     properties: {
-    #       house: {
-    #         type: :object,
-    #         properties: {
-    #           name: { type: :string },
-    #           price: { type: :integer },
-    #           description: { type: :string },
-    #           country: { type: :string },
-    #           city: { type: :string },
-    #           address: { type: :string },
-    #           property_type: { type: :string },
-    #           image_url: { type: :string }
-    #         },
-    #         required: %w[name price description country city address property_type image_url]
-    #       }
-    #     }
-    #   }
-
-    #   run_test!
-    # end
   end
 end
