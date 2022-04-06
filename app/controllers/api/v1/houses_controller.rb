@@ -38,7 +38,7 @@ class Api::V1::HousesController < ApplicationController
   end
 
   def house_params
-    params.require(:house).permit(:name, :price, :description, :location, :image_url)
+    params.require(:house).permit(:name, :price, :description, :country, :city, :address, :property_type, :image_url)
   end
 
   def house_not_found
