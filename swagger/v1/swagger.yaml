@@ -214,13 +214,6 @@ paths:
         '204':
           description: successful
   "/api/v1/users":
-    get:
-      summary: list all users
-      tags:
-      - Users
-      responses:
-        '200':
-          description: successful
     post:
       summary: create user
       tags:
