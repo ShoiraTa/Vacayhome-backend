@@ -1,8 +1,8 @@
 require 'swagger_helper'
 
 RSpec.describe 'api/v1/users', type: :request do
+  # rubocop:disable Metrics/BlockLength
   path '/api/v1/users' do
-
     get('list all users') do
       tags 'Users'
       response(200, 'successful') do
