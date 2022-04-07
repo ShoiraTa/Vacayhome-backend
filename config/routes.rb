@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :houses, only: [:index, :show,:new, :create, :update, :destroy] 
       resources :bookings, only: [:index, :show,:new, :create, :update, :destroy]
-      resources :users, only:[:indes, :create, :show]
+      resources :users, only:[:index, :create, :show]
     end
   end
 end
