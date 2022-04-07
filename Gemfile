@@ -4,6 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.1.1'
 
 gem 'rubocop', '>= 1.0', '< 2.0'
+gem 'rspec'
 
 gem 'rswag'
 
@@ -53,4 +54,7 @@ group :development do
 end
 
 group :production do
+gem 'rspec'
+
+gem 'rswag'
 end
