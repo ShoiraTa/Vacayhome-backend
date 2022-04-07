@@ -1,0 +1,15 @@
+current directory: /Users/adamteddychang/Documents/GitHub/Vacayhome-backend/vendor/bundle/ruby/3.1.0/gems/bootsnap-1.11.1/ext/bootsnap
+/Users/adamteddychang/.rbenv/versions/3.1.1/bin/ruby -I /Users/adamteddychang/.rbenv/versions/3.1.1/lib/ruby/site_ruby/3.1.0 -r ./siteconf20220407-20046-tcq668.rb extconf.rb
+creating Makefile
+
+current directory: /Users/adamteddychang/Documents/GitHub/Vacayhome-backend/vendor/bundle/ruby/3.1.0/gems/bootsnap-1.11.1/ext/bootsnap
+make DESTDIR\= clean
+
+current directory: /Users/adamteddychang/Documents/GitHub/Vacayhome-backend/vendor/bundle/ruby/3.1.0/gems/bootsnap-1.11.1/ext/bootsnap
+make DESTDIR\=
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.bundle
+
+current directory: /Users/adamteddychang/Documents/GitHub/Vacayhome-backend/vendor/bundle/ruby/3.1.0/gems/bootsnap-1.11.1/ext/bootsnap
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 bootsnap.bundle ./.gem.20220407-20046-v9kakx/bootsnap
