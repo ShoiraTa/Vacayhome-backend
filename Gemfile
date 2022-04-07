@@ -51,9 +51,7 @@ group :development do
   # gem "spring"
 end
 
-
 group :production do
   gem 'rspec'
   gem 'rswag'
 end
-
