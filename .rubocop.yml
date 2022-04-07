@@ -60,3 +60,5 @@ Style/HashTransformValues:
   Enabled: false
 Lint/MissingCopEnableDirective:
   Enabled: false
+Bundler/DuplicatedGem:
+  Enabled: false

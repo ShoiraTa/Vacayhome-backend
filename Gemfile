@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.1.1'
 
+gem 'rspec'
 gem 'rubocop', '>= 1.0', '< 2.0'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
@@ -51,4 +52,8 @@ group :development do
 end
 
 
-gem 'rswag'
+group :production do
+  gem 'rspec'
+  gem 'rswag'
+end
+
