@@ -1,0 +1,270 @@
+---
+swagger: '2.0'
+info:
+  title: API V1
+  version: v1
+paths:
+  "/api/v1/bookings":
+    get:
+      summary: list all booking
+      tags:
+      - Bookings
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: add a booking
+      tags:
+      - Bookings
+      consumes:
+      - application/json
+      parameters:
+      - name: booking
+        in: body
+        schema:
+          type: object
+          properties:
+            booking:
+              type: object
+              properties:
+                user_id:
+                  type: integer
+                house_id:
+                  type: integer
+                date:
+                  type: string
+                  format: datetime
+              required:
+              - user_id
+              - house_id
+              - date
+      responses:
+        '201':
+          description: successful
+  "/api/v1/bookings/{id}":
+    parameters:
+    - name: id
+      in: path
+      type: string
+      description: id
+      required: true
+    delete:
+      summary: Delete a Booking
+      tags:
+      - Bookings
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: id
+        in: path
+        type: integer
+        required: true
+      responses:
+        '204':
+          description: Booking deleted
+    put:
+      summary: update a booking
+      tags:
+      - Bookings
+      consumes:
+      - application/json
+      parameters:
+      - name: booking
+        in: body
+        schema:
+          type: object
+          properties:
+            booking:
+              type: object
+              properties:
+                user_id:
+                  type: integer
+                house_id:
+                  type: integer
+                date:
+                  type: string
+                  format: datetime
+              required:
+              - user_id
+              - house_id
+              - date
+      responses:
+        '201':
+          description: successful
+  "/api/v1/houses":
+    get:
+      summary: list houses
+      tags:
+      - Houses
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create house
+      tags:
+      - Houses
+      consumes:
+      - application/json
+      parameters:
+      - name: house
+        in: body
+        required: true
+        schema:
+          type: object
+          properties:
+            house:
+              type: object
+              properties:
+                name:
+                  type: string
+                price:
+                  type: integer
+                description:
+                  type: string
+                country:
+                  type: string
+                city:
+                  type: string
+                address:
+                  type: string
+                property_type:
+                  type: string
+                image_url:
+                  type: string
+              required:
+              - name
+              - price
+              - description
+              - country
+              - city
+              - address
+              - property_type
+              - image_url
+      responses:
+        '201':
+          description: successful
+  "/api/v1/houses/{id}":
+    delete:
+      summary: Delete a house
+      tags:
+      - Houses
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: id
+        in: path
+        type: integer
+        required: true
+      responses:
+        '204':
+          description: House deleted
+    patch:
+      summary: update house
+      tags:
+      - Houses
+      consumes:
+      - application/json
+      parameters:
+      - name: id
+        in: path
+        type: integer
+        required: true
+      - name: house
+        in: body
+        schema:
+          type: object
+          properties:
+            house:
+              type: object
+              properties:
+                name:
+                  type: string
+                price:
+                  type: integer
+                description:
+                  type: string
+                country:
+                  type: string
+                city:
+                  type: string
+                address:
+                  type: string
+                property_type:
+                  type: string
+                image_url:
+                  type: string
+              required:
+              - name
+              - price
+              - description
+              - country
+              - city
+              - address
+              - property_type
+              - image_url
+      responses:
+        '204':
+          description: successful
+  "/api/v1/users":
+    get:
+      summary: list all users
+      tags:
+      - Users
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create user
+      tags:
+      - Users
+      consumes:
+      - application/json
+      parameters:
+      - name: user
+        in: body
+        required: true
+        schema:
+          type: object
+          properties:
+            user:
+              type: object
+              properties:
+                name:
+                  type: string
+                email:
+                  type: string
+              required:
+              - name
+              - email
+      responses:
+        '201':
+          description: successful
+  "/api/v1/users/{id}":
+    get:
+      summary: Retrieves all bookings made by a User
+      tags:
+      - Users
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: id
+        in: path
+        type: string
+        required: true
+      responses:
+        '200':
+          description: user found
+servers:
+- url: http://{defaultHost}
+  variables:
+    defaultHost:
+      default: localhost:3000
