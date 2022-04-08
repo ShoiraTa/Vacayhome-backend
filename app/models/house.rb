@@ -1,5 +1,5 @@
 class House < ApplicationRecord
-  has_many :bookings
+  has_many :bookings, dependent: :destroy
   validates :name, presence: true
   validates :price, presence: true
   validates :description, presence: true
